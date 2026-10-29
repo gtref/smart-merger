@@ -1,0 +1,30 @@
+{
+  "name": "smart-merge-cli",
+  "version": "1.0.4",
+  "description": "A tool that helps with git merge conflicts",
+  "keywords": [
+    "git",
+    "merge"
+  ],
+  "license": "MIT",
+  "author": "gtref",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "smartmerge": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"No Tests\"",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "chalk": "^6.0.1",
+    "commander": "^15.0.0",
+    "glob": "^13.0.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0"
+  }
+}
