@@ -13,7 +13,7 @@ const program = new Command();
 program
   .name("SmartMerger")
   .description("A tool to help with merging of git conflicts")
-  .version("1.0.0")
+  .version("1.1.0", "-v, --version", "display version information")
   .option("--no-color", "Output with no color")
   .option("--json", "Output in machine readable json format");
 
@@ -84,6 +84,26 @@ program
       return;
     }
     renderSummary(data);
+  });
+
+program
+  .command("about")
+  .description("Show information about SmartMerge")
+  .action(() => {
+    console.log(`
+SmartMerge v1.1.0
+
+Your git CLI's best friend.
+
+Commands:
+  summary
+  history
+  status
+  branches
+  status
+
+https://npmjs.com/package/smart-merge-cli
+`);
   });
 
 program.parse(process.argv);

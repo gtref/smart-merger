@@ -25,5 +25,13 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.13.0",
     "globals": "^17.13.0"
+  },
+  "homepage": "https://github.com/gtref/smart-merger#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtref/smart-merger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gtref/smart-merger/issues"
   }
 }
