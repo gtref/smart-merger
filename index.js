@@ -6,6 +6,7 @@ import { explainConflicts, renderExplain } from "./src/commands/explain.js";
 import { repoStatus, renderStatus } from "./src/commands/status.js";
 import { exportJson } from "./src/core/json.js";
 import { repoHistory, renderRepoHistory } from "./src/commands/history.js";
+import { renderSummary, showSummary } from "./src/commands/summary.js"
 
 const program = new Command();
 
@@ -70,5 +71,19 @@ program
     renderRepoHistory(data);
   })
 
+program
+  .command("summary")
+  .description("Show detailed summary of local repo")
+  .argument("<path>", "Path to the git repo")
+  .action((path) => {
+    const options = program.opts();
+    const data = showSummary(path);
+
+    if (options.json) {
+      exportJson(data);
+      return;
+    }
+    renderSummary(data);
+  });
 
 program.parse(process.argv);

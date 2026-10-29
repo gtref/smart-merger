@@ -45,7 +45,7 @@ export function getBranches(path = process.cwd()) {
 
 export function getHistory(file, path = process.cwd()) {
   return run(
-    `git log --format="%H|%ad|%s" --date=short -- "${file}"`,
+    `git log --format="%H|%ad|%an|%s" --date=short -- "${file}"`,
     path,
   );
 }

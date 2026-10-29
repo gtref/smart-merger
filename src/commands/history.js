@@ -10,11 +10,12 @@ export function repoHistory(path) {
             .split("\n")
             .filter(Boolean)
             .map((entry) => {
-                const [hash, date, message] = entry.split("|");
+                const [hash, date, author, message] = entry.split("|");
 
                 return {
                     hash,
                     date,
+                    author,
                     message,
                 };
             });
@@ -36,7 +37,7 @@ export function renderRepoHistory(data) {
 
         for (const commit of item.history) {
             console.log(
-                `  ${commit.hash.slice(0, 7)} ${commit.date} ${commit.message}`,
+                `  ${commit.hash.slice(0, 7)} ${commit.date} ${commit.author} ${commit.message}`,
             );
         }
     }
