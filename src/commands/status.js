@@ -18,7 +18,7 @@ export function repoStatus(path = ".") {
     .split("\n")
     .filter(Boolean)
     .map((line) => ({
-        name: line.replace("*", " ").trim(),
+        name: line.replace(/\*/g, " ").trim(),
         current: line.startsWith("*"),
     }));
 
