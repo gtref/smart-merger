@@ -1,6 +1,9 @@
 # SmartMerge
 Your git cli's best friend.
+
 [![Socket Badge](https://badge.socket.dev/npm/package/smart-merge-cli/latest)](https://badge.socket.dev/npm/package/smart-merge-cli/latest)
+![NPM Version](https://img.shields.io/npm/v/smart-merge-cli)
+
 
 
 ## About
